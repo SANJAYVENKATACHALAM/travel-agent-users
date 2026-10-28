@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Travel Planner</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="/static/css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-plane-departure"></i>
+
+            <h2>AI Travel Planner</h2>
+
+        </div>
+
+        <button id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </header>
+
+
+    <!-- Main Content -->
+
+    <div class="container">
+
+
+        <!-- Left Card -->
+
+        <div class="trip-card">
+
+            <h2>
+
+                <i class="fa-solid fa-earth-americas"></i>
+
+                Create AI Trip
+
+            </h2>
+
+            <form id="aiTripForm">
+
+                <label>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Destination
+
+                </label>
+
+                <input
+                    id="destination"
+                    type="text"
+                    placeholder="Enter Destination"
+                    required>
+
+
+                <label>
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    Days
+
+                </label>
+
+                <input
+                    id="days"
+                    type="number"
+                    min="1"
+                    required>
+
+
+                <label>
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    Budget
+
+                </label>
+
+                <input
+                    id="budget"
+                    type="number"
+                    required>
+
+
+                <label>
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Travelers
+
+                </label>
+
+                <input
+                    id="travelers"
+                    type="number"
+                    min="1"
+                    required>
+
+
+                <label>
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    Interests
+
+                </label>
+
+                <textarea
+                    id="interests"
+                    rows="4"
+                    placeholder="Example: Beach, Food, Adventure"
+                    required></textarea>
+
+
+                <button
+                    class="generate-btn"
+                    type="submit">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Generate AI Itinerary
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Right Card -->
+
+        <div class="result-card">
+
+            <h2>
+
+                <i class="fa-solid fa-map-location-dot"></i>
+
+                Your AI Itinerary
+
+            </h2>
+
+            <div id="loading"></div>
+
+            <div id="itinerary">
+
+                <div class="empty">
+
+                    <i class="fa-solid fa-route"></i>
+
+                    <h3>No itinerary generated yet</h3>
+
+                    <p>
+
+                        Fill the trip details on the left and click
+                        <strong>Generate AI Itinerary</strong>.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script src="/static/js/dashboard.js"></script>
+
+</body>
+
+</html>
